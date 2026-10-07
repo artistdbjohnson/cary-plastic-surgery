@@ -1,0 +1,195 @@
+TITLE: Accessible Cary Plastic Surgery Website
+DESC: Explore Cary Plastic Surgery’s accessible website designed for all, including the visually impaired.
+
+Mobile Navigation Toggle
+Home
+About
+Why Cary Plastic Surgery
+Meet Dr. Hanna
+Patient Testimonials
+Breast
+Breast Augmentation
+Breast Lift
+Breast Reduction
+Breast Implant Removal
+Gynecomastia
+Body
+Tummy Tuck
+Liposuction
+Arm Lift
+Thigh Lift
+Labial Reduction / Reconstruction
+Face
+Facelift
+Blepharoplasty
+Brow Lift
+Otoplasty
+Rhinoplasty
+Cosmetic
+Lip Filler
+Injectables
+Microneedling
+Scar Revisions
+Gallery
+Contact
+Book Now
+919-233-1933
+Book Now
+919-233-1933
+Home
+About
+Why Cary Plastic Surgery
+Meet Dr. Hanna
+Patient Testimonials
+Breast
+Breast Augmentation
+Breast Lift
+Breast Reduction
+Breast Implant Removal
+Gynecomastia
+Body
+Tummy Tuck
+Liposuction
+Arm Lift
+Thigh Lift
+Labial Reduction / Reconstruction
+Face
+Facelift
+Blepharoplasty
+Brow Lift
+Otoplasty
+Rhinoplasty
+Cosmetic
+Lip Filler
+Injectables
+Microneedling
+Scar Revisions
+Gallery
+Contact
+Search Site
+Cary Plastic Surgery
+1608 Kildaire Farm Rd, Ste 100
+Cary, NC 27511
+919-233-1933
+1608 Kildaire Farm Rd, Ste 100,
+Cary, NC 27511
+Open Today:
+8:00 am - 5:00 pm
+Accessibility
+General
+Cary Plastic Surgery strongly believes that every person has the right to live with dignity, equality, comfort, and independence and strives to ensure that our services are accessible to people with disabilities. Toward that goal, we have invested resources to make our website https://caryplasticsurgery.com easier to use and more accessible for people with disabilities.
+Accessibility
+Cary Plastic Surgery has taken great care to ensure our website has been built to be accessible to those who may be visually impaired or require a screen reader to access our website. We utilize several accessibility auditing tools such as “
+Lighthouse
+” and “
+Axe
+” to accomplish this. These accessibility tools allow our website to improve its compliance by conforming with the World Wide Web Consortium’s (W3C) Web Content Accessibility Guidelines (WCAG) 2.1 level AA success criteria.
+Disclaimer
+Cary Plastic Surgery continues efforts to improve the accessibility of our website and services to facilitate accessibility and ease of use for all persons, including those with disabilities. Despite our best efforts to make all pages and content on our website fully accessible, some content may not yet be fully adapted to the strictest accessibility standards. This may be a result of not having found or identified the most appropriate technological solution.
+Third-Party Websites
+Below are the Accessibility Policies provided from the following third-party websites, which are publicly available:
+Facebook Accessibility Policy
+Instagram Accessibility Announcement
+Instagram Accessibility
+Twitter Accessibility
+YouTube Accessibility Policy
+Report Accessibility-Related Issue
+Cary Plastic Surgery takes website accessibility seriously and appreciates your feedback. If you are experiencing accessibility issues on our website, please submit an email to: webmaster@infostarproductions.com. Please provide us with as many specific details as possible regarding your accessibility issue so we may address your concerns. Thank you.
+Contact Us
+Whether you're exploring a change or ready to take the next step, we're here to support you with care, transparency, and confidence.
+Do not fill out this field
+Name:
+E-mail:
+Phone:
+(optional)
+Preferred Contact Method:
+(optional)
+Call
+Text
+Privacy Policy
+|
+Terms & Conditions
+">
+Text Message Opt-In Disclaimer
+E-mail
+Message:
+Send
+Location & Hours
+Cary Plastic Surgery
+1608 Kildaire Farm Rd, Ste 100
+Cary, NC 27511
+919-233-1933
+Monday:
+8:00 am - 5:00 pm
+Tuesday:
+8:00 am - 5:00 pm
+Wednesday:
+8:00 am - 5:00 pm
+Thursday:
+8:00 am - 5:00 pm
+Friday:
+8:00 am - 12:00 pm
+Cary Plastic Surgery
+1608 Kildaire Farm Rd, Ste 100
+Cary, NC 27511
+View Interactive Map
+View Larger Map
+Search Site
+Accessibility
+|
+Privacy Policy
+|
+Terms & Conditions
+|
+Site Map
+Website design, development & managed by
+© 2025 All rights reserved.
+Search
+Submit
+Educational Video
+English
+Spanish
+--- IMAGES
+ - Cary Plastic Surgery | /images/logo.png
+ - Cary Plastic Surgery | /images/logo.png
+ -  | 
+ - Google Map For Cary Plastic Surgery | data:inline
+ - Infostar Productions Logo | /infostarassets/images/infostar-logo-xxxs.png
+--- LINKS
+ /
+ /before-after-gallery
+ /body-plastic-surgery/arm-lift
+ /body-plastic-surgery/labial-reduction-reconstruction
+ /body-plastic-surgery/liposuction
+ /body-plastic-surgery/thigh-lift
+ /body-plastic-surgery/tummy-tuck
+ /breast-plastic-surgery/breast-augmentation
+ /breast-plastic-surgery/breast-implant-removal
+ /breast-plastic-surgery/breast-lift
+ /breast-plastic-surgery/breast-reduction
+ /breast-plastic-surgery/gynecomastia
+ /contact-us
+ /cosmetic-plastic-surgery/injectables
+ /cosmetic-plastic-surgery/lip-filler
+ /cosmetic-plastic-surgery/microneedling
+ /cosmetic-plastic-surgery/scar-revisions
+ /face-plastic-surgery/blepharoplasty
+ /face-plastic-surgery/brow-lift
+ /face-plastic-surgery/facelift
+ /face-plastic-surgery/otoplasty
+ /face-plastic-surgery/rhinoplasty
+ /meet-dr-hanna
+ /patient-testimonials
+ /request-appointment
+ /sitemap
+ /why-cary-plastic-surgery
+ https://9to5mac.com/2018/11/28/accessibility-instagram-alternative-text/
+ https://developer.chrome.com/docs/lighthouse/overview/
+ https://help.instagram.com/1178723545597542
+ https://help.twitter.com/en/using-twitter/picture-descriptions
+ https://maps.google.com/?q=1608%20Kildaire%20Farm%20Rd,%20Ste%20100,Cary,NC%2027511
+ https://support.google.com/youtube/answer/189278?hl=en
+ https://www.deque.com/axe/
+ https://www.facebook.com/help/accessibility
+ https://www.infostarproductions.com
+ tel:+19192331933
