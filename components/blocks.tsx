@@ -17,27 +17,27 @@ function faqPair(item: string): { q: string; a: string } | null {
   return { q: match[1], a: match[2] };
 }
 
-export function Blocks({ blocks }: { blocks: Block[] }) {
+export function Blocks({ blocks, anchor }: { blocks: Block[]; anchor?: string }) {
   return (
     <div className="space-y-5">
       {blocks.map((block, i) => (
-        <BlockView key={i} block={block} />
+        <BlockView key={i} block={block} anchor={i === 0 ? anchor : undefined} />
       ))}
     </div>
   );
 }
 
-function BlockView({ block }: { block: Block }) {
+function BlockView({ block, anchor }: { block: Block; anchor?: string }) {
   if (block.t === "h2" && block.text) {
     return (
-      <h2 className="pt-8 text-3xl font-medium leading-tight md:text-4xl">
+      <h2 id={anchor} className="text-3xl font-medium leading-tight md:text-4xl">
         <Tx text={block.text} />
       </h2>
     );
   }
   if (block.t === "h3" && block.text) {
     return (
-      <h3 className="pt-4 text-xl font-medium">
+      <h3 id={anchor} className="pt-4 text-xl font-medium">
         <Tx text={block.text} />
       </h3>
     );
@@ -221,7 +221,7 @@ export function SectionIndex({ items }: { items: { id: string; label: string }[]
       <p className="caps mb-3 hidden text-muted lg:block">
         <Tx text="On this page" />
       </p>
-      <ul className="flex gap-2 overflow-auto lg:block lg:space-y-2">
+      <ul className="flex max-w-full gap-2 overflow-x-auto lg:block lg:space-y-2">
         {items.map((item) => (
           <li key={item.id} className="shrink-0">
             <a href={`#${item.id}`} className="chip lg:border-0 lg:px-0 lg:py-0 lg:text-sm lg:text-muted lg:rounded-none">

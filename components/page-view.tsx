@@ -115,8 +115,8 @@ function Longform({ page, pageKey }: { page: PageData; pageKey: string }) {
     <>
       <PageHero page={page} pageKey={pageKey} />
       <div className="shell section-pad">
-        <div className="grid grid-cols-12 gap-8">
-          <aside className="col-span-12 lg:col-span-3">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
+          <aside className="min-w-0 lg:col-span-3">
             <div className="space-y-8 lg:sticky lg:top-[calc(var(--nav-h)+24px)]">
               {showMargin && quote ? <MarginNote quote={quote} /> : <div className="hidden lg:block" />}
               <div className="hidden lg:block">
@@ -124,7 +124,7 @@ function Longform({ page, pageKey }: { page: PageData; pageKey: string }) {
               </div>
             </div>
           </aside>
-          <div className="col-span-12 lg:col-span-9">
+          <div className="min-w-0 lg:col-span-9">
             <div className="mb-8 lg:hidden">
               <SectionIndex items={index} />
             </div>
@@ -166,12 +166,14 @@ function SectionBlock({
     const list = featuredReviews[pageKey] || [];
     const slice = (section.kind || "").includes("interior") ? list.slice(0, 3) : list.slice(0, 1);
     return (
-      <section id={id} className="mt-12">
+      <section className="pt-16">
         {sectionHeading(section) ? (
-          <h2 className="mb-4 text-3xl font-medium">
+          <h2 id={id} className="mb-4 text-3xl font-medium">
             <Tx text={sectionHeading(section) || ""} />
           </h2>
-        ) : null}
+        ) : (
+          <div id={id} />
+        )}
         {slice.map((review) => (
           <ReviewCard key={review.name + review.date} review={review} />
         ))}
@@ -184,9 +186,10 @@ function SectionBlock({
   const extra = shotKind && isProcedureKey(pageKey) ? procedureShot(slugOf(pageKey), shotKind) : null;
   const hasImg = blocks.some((b) => b.t === "img");
   const [first, ...rest] = blocks;
+  const headingFirst = first?.t === "h2" || first?.t === "h3";
   return (
-    <section id={id} className="mt-12">
-      {first ? <Blocks blocks={[first]} /> : null}
+    <section id={headingFirst ? undefined : id} className="pt-16">
+      {first ? <Blocks blocks={[first]} anchor={headingFirst ? id : undefined} /> : null}
       {extra && !hasImg ? (
         <Plate
           src={extra}
@@ -233,8 +236,8 @@ function Gallery({ page, pageKey }: { page: PageData; pageKey: string }) {
     <>
       <PageHero page={page} pageKey={pageKey} />
       <div className="shell section-pad">
-        <div className="grid grid-cols-12">
-          <div className="col-span-12 lg:col-span-8 lg:col-start-4">
+        <div className="grid grid-cols-1 lg:grid-cols-12">
+          <div className="min-w-0 lg:col-span-8 lg:col-start-4">
             <p>
               <Tx text={intro} />
             </p>
@@ -333,8 +336,8 @@ function Contact({ page, pageKey }: { page: PageData; pageKey: string }) {
   return (
     <>
       <PageHero page={page} pageKey={pageKey} />
-      <div className="shell section-pad grid grid-cols-12 gap-10">
-        <div className="col-span-12 lg:col-span-5">
+      <div className="shell section-pad grid grid-cols-1 gap-10 lg:grid-cols-12">
+        <div className="min-w-0 lg:col-span-5">
           <p>
             <Tx text={CONTACT_LINE} />
           </p>
@@ -375,7 +378,7 @@ function Contact({ page, pageKey }: { page: PageData; pageKey: string }) {
             </p>
           </div>
         </div>
-        <div className="col-span-12 lg:col-span-6 lg:col-start-7">
+        <div className="min-w-0 lg:col-span-6 lg:col-start-7">
           <h2 className="mb-6 text-2xl font-medium">
             <Tx text="Send Us A Message" />
           </h2>
@@ -391,8 +394,8 @@ function Appointment({ page, pageKey }: { page: PageData; pageKey: string }) {
   return (
     <>
       <PageHero page={page} pageKey={pageKey} />
-      <div className="shell section-pad grid grid-cols-12 gap-10">
-        <div className="col-span-12 lg:col-span-7">
+      <div className="shell section-pad grid grid-cols-1 gap-10 lg:grid-cols-12">
+        <div className="min-w-0 lg:col-span-7">
           <h2 className="text-2xl font-medium">
             <Tx text="Online Appointment Request" />
           </h2>
@@ -420,7 +423,7 @@ function Appointment({ page, pageKey }: { page: PageData; pageKey: string }) {
             </p>
           </div>
         </div>
-        <div className="col-span-12 lg:col-span-4 lg:col-start-9">
+        <div className="min-w-0 lg:col-span-4 lg:col-start-9">
           <p className="caps text-muted">
             <Tx text="Location & Hours" />
           </p>
@@ -495,8 +498,8 @@ function SitemapPage({ page, pageKey }: { page: PageData; pageKey: string }) {
     <>
       <PageHero page={page} pageKey={pageKey} />
       <div className="shell section-pad">
-        <div className="grid grid-cols-12">
-          <div className="col-span-12 lg:col-span-8 lg:col-start-4">
+        <div className="grid grid-cols-1 lg:grid-cols-12">
+          <div className="min-w-0 lg:col-span-8 lg:col-start-4">
             <SitemapBody />
           </div>
         </div>

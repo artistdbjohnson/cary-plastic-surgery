@@ -4,12 +4,15 @@ import { animate, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { MARK_PATHS } from "@/components/mark";
+import { ptOf } from "@/components/tx";
+
+const TAGLINE = "Sculpting Beauty with a Personal Touch.";
 
 const ORDER = [
-  { index: 3, delay: 0, duration: 0.48 },
-  { index: 1, delay: 0.28, duration: 0.52 },
-  { index: 0, delay: 0.62, duration: 0.42 },
-  { index: 2, delay: 0.92, duration: 0.62 },
+  { index: 3, delay: 0, duration: 0.34 },
+  { index: 1, delay: 0.16, duration: 0.36 },
+  { index: 0, delay: 0.36, duration: 0.3 },
+  { index: 2, delay: 0.55, duration: 0.5 },
 ];
 
 export function Opening() {
@@ -51,7 +54,7 @@ export function Opening() {
       dismiss();
     };
     window.addEventListener("keydown", onKey);
-    const flipAt = window.setTimeout(() => finish(false), 2000);
+    const flipAt = window.setTimeout(() => finish(false), 1720);
     return () => {
       window.removeEventListener("keydown", onKey);
       window.clearTimeout(flipAt);
@@ -79,7 +82,7 @@ export function Opening() {
     window.setTimeout(() => {
       document.documentElement.removeAttribute("data-open");
       setShow(false);
-    }, 700);
+    }, 560);
   }
 
   if (!show) return null;
@@ -129,7 +132,7 @@ export function Opening() {
                 className="text-[13px] font-semibold tracking-[0.22em]"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.38 + i * 0.05, duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ delay: 1.12 + i * 0.04, duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
               >
                 {ch}
               </motion.span>
@@ -139,7 +142,7 @@ export function Opening() {
             className="mt-2 text-[9px] tracking-[0.28em] text-muted"
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.58, duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ delay: 1.22, duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
           >
             PLASTIC SURGERY
           </motion.div>
@@ -148,9 +151,10 @@ export function Opening() {
           className="mt-6 max-w-md font-serif text-2xl italic leading-snug text-ink"
           initial={{ clipPath: "inset(0 100% 0 0)" }}
           animate={{ clipPath: "inset(0 0% 0 0)" }}
-          transition={{ delay: 1.68, duration: 0.42, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ delay: 1.32, duration: 0.34, ease: [0.16, 1, 0.3, 1] }}
         >
-          Sculpting Beauty with a Personal Touch.
+          <span className="lang-en">{TAGLINE}</span>
+          <span className="lang-pt">{ptOf(TAGLINE)}</span>
         </motion.p>
       </div>
     </div>

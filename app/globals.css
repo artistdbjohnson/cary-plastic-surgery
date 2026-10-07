@@ -26,9 +26,6 @@ html[data-theme="dark"] {
   color-scheme: dark;
 }
 
-html {
-  scroll-padding-top: calc(var(--nav-h) + env(safe-area-inset-top) + 16px);
-}
 
 html:not([lang="pt"]) .lang-pt {
   display: none !important;
@@ -72,6 +69,12 @@ html[data-theme="dark"] body {
 
 [id] {
   scroll-margin-top: calc(var(--nav-h) + env(safe-area-inset-top) + 16px);
+}
+
+.bleed-row {
+  width: 100dvw;
+  max-width: 100dvw;
+  margin-left: calc(50% - 50dvw);
 }
 
 .section-pad {
@@ -154,7 +157,7 @@ html[data-theme="dark"] body {
 
 .nav-bar {
   background: var(--paper);
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--gold);
 }
 
 .nav-bar[data-frost="true"] {
@@ -183,6 +186,8 @@ html[data-theme="dark"] body {
 
 .field {
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
   background: transparent;
   border: 0;
   border-bottom: 1px solid var(--line);

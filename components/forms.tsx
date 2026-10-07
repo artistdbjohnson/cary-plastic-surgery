@@ -48,7 +48,7 @@ function StudyNote() {
 
 function Honeypot() {
   return (
-    <p className="absolute left-[-9999px] h-0 overflow-hidden" aria-hidden="true">
+    <p className="sr-only" aria-hidden="true">
       <label>
         <Tx text="Do not fill out this field" />
         <input tabIndex={-1} autoComplete="off" name="company" />
@@ -127,7 +127,7 @@ export function ContactForm() {
     setSent(true);
   }
   return (
-    <form onSubmit={onSubmit} className="relative space-y-6" noValidate={false}>
+    <form onSubmit={onSubmit} className="relative min-w-0 space-y-6" noValidate={false}>
       <Honeypot />
       <Field label="Name" name="name" required />
       <Field label="E-mail" name="email" type="email" required />
@@ -160,7 +160,7 @@ export function AppointmentForm() {
     setSent(true);
   }
   return (
-    <form onSubmit={onSubmit} className="relative space-y-12">
+    <form onSubmit={onSubmit} className="relative min-w-0 space-y-12">
       <Honeypot />
       <fieldset className="space-y-6">
         <legend className="caps mb-4 text-ink">

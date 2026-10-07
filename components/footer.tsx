@@ -13,8 +13,8 @@ export function Footer() {
   return (
     <footer className="border-t border-line">
       <div className="shell section-pad">
-        <div className="grid grid-cols-12 gap-10">
-          <div className="col-span-12 md:col-span-4">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
+          <div className="min-w-0 md:col-span-4">
             <Link href="/" className="inline-flex items-center gap-3" aria-label="Cary Plastic Surgery">
               <Mark className="h-12 w-auto" />
               <span>
@@ -52,7 +52,7 @@ export function Footer() {
               </Link>
             </div>
           </div>
-          <div className="col-span-12 grid grid-cols-2 gap-8 sm:grid-cols-3 md:col-span-8 lg:grid-cols-5">
+          <div className="grid min-w-0 grid-cols-2 gap-8 sm:grid-cols-3 md:col-span-8 lg:grid-cols-5">
             {GROUPS.map((group) => (
               <div key={group.label}>
                 <Link href={group.href} className="caps text-muted">

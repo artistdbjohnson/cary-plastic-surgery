@@ -58,7 +58,7 @@ export function HomeView() {
               <div className="order-2 lg:order-1 lg:col-span-8">
                 <LettersPullUp
                   text="CARY"
-                  className="block font-semibold leading-[0.8] tracking-[-0.07em] text-ink text-[26vw] sm:text-[24vw] md:text-[22vw] lg:text-[18vw] xl:text-[16vw]"
+                  className="block max-w-full font-semibold leading-[0.8] tracking-[-0.07em] text-ink text-[22vw] md:text-[20vw] lg:text-[16vw] xl:text-[20vw]"
                 />
                 <span className="sr-only">Cary</span>
               </div>
@@ -96,10 +96,10 @@ export function HomeView() {
         </div>
       </section>
 
-      <section id="services" className="section-pad">
+      <section className="section-pad">
         <div className="shell">
-          <p className="caps text-muted">Cary, NC</p>
-          <h2 className="mt-3 max-w-3xl text-3xl font-medium leading-tight md:text-5xl">
+          <p className="caps mb-3 text-muted">Cary, NC</p>
+          <h2 id="services" className="max-w-3xl text-3xl font-medium leading-tight md:text-5xl">
             <Tx text={h2} />
           </h2>
           <p className="mt-4 max-w-2xl font-serif text-2xl italic text-ink">
@@ -133,17 +133,17 @@ export function HomeView() {
         </div>
       </section>
 
-      <section id="consultation" className="px-4 md:px-6">
+      <section className="px-4 md:px-6">
         <div className="shell overflow-hidden rounded-2xl bg-paper-2 md:rounded-[2rem]">
           <div className="grid md:grid-cols-2">
             <div className="relative min-h-[280px]">
               <Image src="/media/plates/consult-desk.jpg" alt="Consultation desk" fill sizes="50vw" className="object-cover" />
             </div>
             <div className="flex flex-col justify-center p-8 md:p-14">
-              <p className="caps text-muted">
+              <p className="caps mb-4 text-muted">
                 <Bi en="THE CONSULT" pt="A CONSULTA" />
               </p>
-              <h2 className="mt-4 whitespace-pre-line text-4xl font-medium leading-tight md:text-5xl">
+              <h2 id="consultation" className="whitespace-pre-line text-4xl font-medium leading-tight md:text-5xl">
                 <Tx text={consult} />
               </h2>
               <Link href="/request-appointment" className="mt-8 inline-flex w-fit rounded-full bg-ink px-5 py-3 text-sm text-paper">
@@ -154,13 +154,13 @@ export function HomeView() {
         </div>
       </section>
 
-      <section id="dr-hanna" className="section-pad">
+      <section className="section-pad">
         <div className="shell">
           <div className="bg-paper-2 px-6 py-12 md:px-12 md:py-16">
-            <p className="caps text-muted">
+            <p className="caps mb-6 text-muted">
               <Bi en="THE SURGEON" pt="O CIRURGIÃO" />
             </p>
-            <div className="mt-6 max-w-4xl text-4xl leading-[0.95] md:text-6xl">
+            <div id="dr-hanna" className="max-w-4xl text-4xl leading-[0.95] md:text-6xl">
               <MultiPull
                 className="lang-en"
                 parts={[
@@ -219,10 +219,10 @@ export function HomeView() {
         </div>
       </section>
 
-      <section id="reviews" className="section-pad pt-0">
-        <div className="shell grid grid-cols-12 gap-8">
-          <div className="col-span-12 lg:col-span-7">
-            <h2 className="text-3xl font-medium md:text-4xl">
+      <section className="section-pad pt-0">
+        <div className="shell grid grid-cols-1 gap-8 lg:grid-cols-12">
+          <div className="min-w-0 lg:col-span-7">
+            <h2 id="reviews" className="text-3xl font-medium md:text-4xl">
               <Tx text="What Our Patients Are Saying" />
             </h2>
             <p className="mt-4 text-2xl font-medium">
@@ -243,7 +243,7 @@ export function HomeView() {
               </a>
             </div>
           </div>
-          <div className="col-span-12 lg:col-span-5">
+          <div className="min-w-0 lg:col-span-5">
             <div className="relative aspect-[4/5] overflow-hidden">
               <Image src="/media/plates/reviews-stilllife.jpg" alt="Practice still life" fill sizes="40vw" className="object-cover" />
             </div>
@@ -256,10 +256,10 @@ export function HomeView() {
 
       <Arrival id="arrival" heading={facilityHeading} paragraphs={facilityParas} />
 
-      <section id="contact" className="section-pad">
-        <div className="shell grid grid-cols-12 gap-10">
-          <div className="col-span-12 lg:col-span-5">
-            <h2 className="text-3xl font-medium md:text-4xl">
+      <section className="section-pad">
+        <div className="shell grid grid-cols-1 gap-10 lg:grid-cols-12">
+          <div className="min-w-0 lg:col-span-5">
+            <h2 id="contact" className="text-3xl font-medium md:text-4xl">
               <Tx text="Contact Us" />
             </h2>
             <p className="mt-4">
@@ -297,7 +297,7 @@ export function HomeView() {
               </p>
             </div>
           </div>
-          <div className="col-span-12 lg:col-span-6 lg:col-start-7">
+          <div className="min-w-0 lg:col-span-6 lg:col-start-7">
             <ContactForm />
           </div>
         </div>
@@ -400,21 +400,22 @@ function FilmCard() {
 function Pillar({ href, label, pageKey }: { href: string; label: string; pageKey: string }) {
   const shot = headerShot(pageKey);
   return (
-    <Link href={href} className="group relative block min-h-[280px] overflow-hidden bg-paper-2">
-      <Image
-        src={shot.src}
-        alt={shot.altEn}
-        fill
-        sizes="(min-width: 1280px) 22vw, 50vw"
-        className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-        style={{ objectPosition: shot.position }}
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-[rgba(15,28,43,0.45)] to-transparent" />
-      <div className="absolute inset-x-0 bottom-0 p-5 text-paper">
+    <Link href={href} className="group block bg-paper-2">
+      <div className="relative aspect-[4/5] overflow-hidden">
+        <Image
+          src={shot.src}
+          alt={shot.altEn}
+          fill
+          sizes="(min-width: 1280px) 22vw, 50vw"
+          className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+          style={{ objectPosition: shot.position }}
+        />
+      </div>
+      <div className="border-t border-gold px-4 py-4">
         <p className="text-2xl font-medium">
           <Tx text={label} />
         </p>
-        <p className="mt-2 caps text-paper/80">
+        <p className="mt-2 caps text-muted">
           <Bi en={shot.captionEn} pt={shot.captionPt} />
         </p>
       </div>

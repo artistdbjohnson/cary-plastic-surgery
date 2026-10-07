@@ -113,8 +113,10 @@ export function Nav() {
             <a href={PHONE_TEL} className="hidden whitespace-nowrap px-1 text-sm xl:inline">
               {PHONE_DISPLAY}
             </a>
-            <LangToggle />
-            <button type="button" onClick={toggleTheme} className="grid h-9 w-9 place-items-center" aria-label="Theme">
+            <span className="hidden lg:inline-flex">
+              <LangToggle />
+            </span>
+            <button type="button" onClick={toggleTheme} className="hidden h-9 w-9 place-items-center lg:grid" aria-label="Theme">
               <span className="lang-en say-dark sr-only">Switch to dark</span>
               <span className="lang-en say-light sr-only">Switch to light</span>
               <span className="lang-pt say-dark sr-only">Mudar para o tema escuro</span>
@@ -233,6 +235,17 @@ function MobileSheet({ onNavigate }: { onNavigate: () => void }) {
           <a href={PHONE_TEL} className="py-1">
             {PHONE_DISPLAY}
           </a>
+          <div className="flex items-center gap-4 pt-2">
+            <LangToggle />
+            <button type="button" onClick={toggleTheme} className="grid h-9 w-9 place-items-center" aria-label="Theme">
+              <span className="lang-en say-dark sr-only">Switch to dark</span>
+              <span className="lang-en say-light sr-only">Switch to light</span>
+              <span className="lang-pt say-dark sr-only">Mudar para o tema escuro</span>
+              <span className="lang-pt say-light sr-only">Mudar para o tema claro</span>
+              <SunIcon />
+              <MoonIcon />
+            </button>
+          </div>
         </div>
       </div>
     </div>

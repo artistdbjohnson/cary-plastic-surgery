@@ -79,15 +79,15 @@ export function Arrival({
   }, []);
 
   return (
-    <section id={id} ref={ref} className={`${bleed ? "relative left-1/2 w-screen max-w-[100vw] -translate-x-1/2" : ""} lg:h-[250svh]`}>
-      <div className="lg:sticky lg:top-[var(--nav-h)] lg:flex lg:h-[calc(100svh-var(--nav-h))] lg:items-center lg:overflow-hidden">
+    <section ref={ref} className={`${bleed ? "bleed-row" : ""} lg:h-[250svh]`}>
+      <div className="lg:sticky lg:top-[var(--nav-h)] lg:flex lg:h-[calc(100svh-var(--nav-h))] lg:items-start lg:overflow-hidden lg:pt-4">
         <div className="shell w-full py-16 lg:py-0">
-          <div className="grid grid-cols-12 items-end gap-8">
-            <div className="col-span-12 lg:col-span-8">
-              <p className="caps text-muted">
-                <Bi en="1608 KILDAIRE FARM RD" pt="1608 KILDAIRE FARM RD" />
-              </p>
-              <h2 className="mt-3 max-w-xl text-3xl font-medium leading-tight md:text-5xl">
+          <div className="grid grid-cols-1 items-end gap-8 lg:grid-cols-12">
+            <div className="min-w-0 lg:col-span-8">
+              <h2 id={id} className="max-w-xl text-3xl font-medium leading-tight md:text-5xl">
+                <span className="caps mb-3 block font-normal text-muted">
+                  <Bi en="1608 KILDAIRE FARM RD" pt="1608 KILDAIRE FARM RD" />
+                </span>
                 <Tx text={heading} />
               </h2>
               <div className="mt-6 max-w-2xl space-y-4 text-[17px]">
@@ -97,7 +97,7 @@ export function Arrival({
                   </p>
                 ))}
               </div>
-              <div className={desktop ? "mt-8 overflow-hidden" : "mt-8 -mx-4 overflow-x-auto px-4 snap-x snap-mandatory"}>
+              <div className={desktop ? "mt-8 overflow-hidden" : "mt-8 -mx-4 max-w-[100vw] overflow-x-auto px-4 snap-x snap-mandatory"}>
                 <motion.div ref={track} className="flex gap-4" style={desktop && !reduce ? { x } : undefined}>
                   {FRAMES.map((frame) => (
                     <figure key={frame.src} className={`snap-start shrink-0 ${frame.wide ? "w-[88vw] lg:w-[62vw]" : "w-[78vw] lg:w-[38vw]"}`}>
@@ -115,7 +115,7 @@ export function Arrival({
                 </motion.div>
               </div>
             </div>
-            <div className="col-span-12 lg:col-span-4">
+            <div className="min-w-0 lg:col-span-4">
               <div className="border-t border-gold pt-5">
                 {status ? (
                   <p className="flex items-center gap-3 text-sm">
